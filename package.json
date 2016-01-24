@@ -1,10 +1,12 @@
 {
   "name": "react.video",
   "version": "1.0.0",
-  "description": "A reusable react video component.",
+  "description": "A reusable React.js video component.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp",
+    "compile": "babel --presets es2015,stage-0,react -d ./ src/",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -16,12 +18,25 @@
     "component",
     "reusable",
     "react.js",
-    "react-video"
+    "react-video",
+    "react-component"
   ],
   "author": "Olivier Colonna <oliviercolonna@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/React-Components-Organization/react.video/issues"
   },
-  "homepage": "https://github.com/React-Components-Organization/react.video#readme"
+  "homepage": "https://github.com/React-Components-Organization/react.video#readme",
+  "peerDependencies": {
+    "react": "^0.14.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-react": "^3.1.0"
+  }
 }
