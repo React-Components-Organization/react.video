@@ -15,7 +15,7 @@ npm install react.video --save
 
 ## Usage
 
-A basic usage of ReactVideo and how to call public method available through this.refs['you-ref'];
+A basic usage of ReactVideo and how to call public methods available through this.refs['your-ref'];
 
 ```js
 import React from 'react';
@@ -123,6 +123,9 @@ export default App;
 
 >**NOTE:** Coming soon
 
+### Api
+
+>**NOTE:** Coming soon
 
 ## Stats
 
