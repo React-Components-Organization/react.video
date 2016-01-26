@@ -11,7 +11,7 @@ install:
 script:
   - npm test
 
-before_deploy:
+after_success:
   - npm run patch-release
 
 deploy:
