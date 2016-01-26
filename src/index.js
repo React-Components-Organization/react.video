@@ -3,7 +3,7 @@
  * Copyright(c) 2016 Olivier Colonna
  * MIT Licensed
  *
- * ReactVideo
+ * ReactVideo Component
  */
 
 import React from 'react';
