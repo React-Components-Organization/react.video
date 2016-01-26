@@ -1,6 +1,6 @@
 {
   "name": "react.video",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A reusable React.js video component.",
   "main": "index.js",
   "scripts": {
