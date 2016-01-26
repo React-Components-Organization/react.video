@@ -12,7 +12,7 @@ script:
   - npm test
 
 before_deploy:
-  - npm version patch
+  - npm run patch-release
 
 deploy:
   provider: npm
