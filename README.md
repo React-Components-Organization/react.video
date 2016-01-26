@@ -73,59 +73,171 @@ export default App;
 
 #### cls {string}
 
->**NOTE:** Coming soon
+>**NOTE:** The CSS class to add to this component's element, in addition to the baseCls 'container'.
+
+```js
+<ReactVideo cls={'custom-video'} />
+```
 
 #### autoPlay {boolean}
 
->**NOTE:** Coming soon
+>**NOTE:** Will automatically start playing the media when the video is activated.
+Defaults to: false
 
 #### src {string}
 
->**NOTE:** Coming soon
+>**NOTE:** Location of the video to play. This should be in H.264 format and in a .mov file format.
+Defaults to: empty string
 
 #### source {array}
 
->**NOTE:** Coming soon
+>**NOTE:** The <source> tag is used to specify multiple media resources for media elements.
+Defaults to: empty array
+
+```js
+const sourceArray: [
+  {
+    src: 'http://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4',
+    type: 'video/mp4'
+  }
+];
+
+<ReactVideo
+  source={sourceArray}>
+</ReactVideo>
+```
 
 #### controls {boolean}
 
->**NOTE:** Coming soon
+>**NOTE:** Determines if native controls should be shown for this video player.
+Defaults to: true
+
+```js
+<ReactVideo
+  controls={true}>
+</ReactVideo>
+```
 
 #### loop {boolean}
 
->**NOTE:** Coming soon
+>**NOTE:** Will loop the media forever.
+Defaults to: false
+
+```js
+<ReactVideo
+  loop={true}>
+</ReactVideo>
+```
 
 #### muted {boolean}
 
->**NOTE:** Coming soon
+>**NOTE:** Whether or not the media is muted. This will also set the volume to zero.
+Defaults to: false
+
+```js
+<ReactVideo
+  muted={true}>
+</ReactVideo>
+```
 
 #### posterUrl {string}
 
->**NOTE:** Coming soon
+>**NOTE:** Location of a poster image to be shown before showing the video.
+Default to: empty string
+
+```js
+<ReactVideo
+  posterUrl={'my-url-to-my-poster'}>
+</ReactVideo>
+```
 
 #### preload {boolean}
 
->**NOTE:** Coming soon
+>**NOTE:** Will begin preloading the media immediately.
+Default to: true
+
+```js
+<ReactVideo
+  preload={true}>
+</ReactVideo>
+```
 
 #### width {number/string}
 
->**NOTE:** Coming soon
+>**NOTE:** The width of this Component; must be a valid CSS length value, e.g: 300, 100px, 30%, etc. By default, if this is not explicitly set, this Component's element will simply have its own natural size. If set to auto, it will set the width to null meaning it will have its own natural size.
 
 #### height {number/string}
 
->**NOTE:** Coming soon
+>**NOTE:** The height of this Component; must be a valid CSS length value, e.g: 300, 100px, 30%, etc. By default, if this is not explicitly set, this Component's element will simply have its own natural size. If set to auto, it will set the height to null meaning it will have its own natural size.
 
 #### not_supported_message {string}
 
->**NOTE:** Coming soon
+>**NOTE:** The message to display in case the browser cannot play the media.
+Default to: 'Sorry your browser does not support HTML5 video.'
 
 #### style {string/object}
 
->**NOTE:** Coming soon
+>**NOTE:** Optional CSS styles that will be rendered into an inline style attribute when the Component is rendered.
+
+You can pass an object:
+
+```
+style: {
+    background: 'red'
+}
+```
 
 ### Api
 
->**NOTE:** Coming soon
+>**NOTE:** All listed methods are available through the refs attribute. example 'this.refs['MyReactComponent'].isEnded()'
+
+#### canPlayType(format)
+
+
+#### isPlaying()
+
+
+#### isEnded()
+
+
+#### load()
+
+
+#### play()
+
+
+#### pause()
+
+
+#### stop()
+
+
+#### getDuration()
+
+
+#### getCurrentTime()
+
+
+#### setCurrentTime()
+
+
+#### getVolume()
+
+
+#### setVolume()
+
+
+#### getBuffered()
+
+
+#### getUrl()
+
+
+#### setPlaybackRate()
+
+
+#### toggle()
+
 
 ## Stats
 

@@ -18,30 +18,55 @@ class ReactVideo extends React.Component {
     }
   }
 
-  canPlayType(format) {
+  /**
+   * The canPlayType() method checks if the browser can play the specified audio/video type.
+   * @param  {string} format, common values (video/mp4, video/webm, audio/mpeg, audio/ogg, audio/mp4).
+   * @return {string} format, common values, including codecs.
+   */
+  canPlayType (format) {
     return this.refs['ReactVideo'].canPlayType(format);
   }
 
+  /**
+   * return if the media is currently playing.
+   * @return {Boolean} playing, return the playback playing status.
+   */
   isPlaying () {
     return !Boolean(this.refs['ReactVideo'].paused);
   }
 
+  /**
+   * get whenever the media playback has ended.
+   * @return {Boolean} ended, return the playback ended status.
+   */
   isEnded () {
     return Boolean(this.refs['ReactVideo'].ended);
   }
 
+  /**
+   * Will begin loading the media immediately.
+   */
   load () {
     this.refs['ReactVideo'].load();
   }
 
+  /**
+   * Starts or resumes media playback.
+   */
   play () {
     this.refs['ReactVideo'].play();
   }
 
+  /**
+   * Pauses media playback.
+   */
   pause () {
     this.refs['ReactVideo'].pause();
   }
 
+  /**
+   * Stops media playback and returns to the beginning.
+   */
   stop () {
     const me = this;
 
@@ -111,6 +136,14 @@ class ReactVideo extends React.Component {
    */
   getPlaybackRate () {
     return this.state.playbackRate;
+  }
+
+  /**
+   * Returns the value of url.
+   * @return {string} return the src value of the video.
+   */
+  getUrl () {
+    return this.refs['ReactVideo'].url;
   }
 
   /**
