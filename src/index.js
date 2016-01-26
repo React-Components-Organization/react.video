@@ -20,7 +20,7 @@ class ReactVideo extends React.Component {
 
   /**
    * The canPlayType() method checks if the browser can play the specified audio/video type.
-   * @param  {string} format, common values (video/mp4, video/webm, audio/mpeg, audio/ogg, audio/mp4).
+   * @param {string} format, common values (video/mp4, video/webm, audio/mpeg, audio/ogg, audio/mp4).
    * @return {string} format, common values, including codecs.
    */
   canPlayType (format) {
@@ -84,38 +84,18 @@ class ReactVideo extends React.Component {
 
   /**
    * Returns the current time of the media, in seconds.
-   * @return {Number}
+   * @return {Number} seconds.
    */
   getCurrentTime () {
     return this.refs['ReactVideo'].currentTime;
   }
 
   /**
-   * Set the current time of the media.
-   * @param {Number} time The time, in seconds.
-   * @return {Number}
-   */
-  setCurrentTime (time) {
-    this.refs['ReactVideo'].currentTime = time;
-
-    return time;
-  }
-
-  /**
-   * @return {number} 
+   * Retun the current volume of the video.
+   * @return {number} Must be a number between 0.0 and 1.0.
    */
   getVolume () {
     return this.state.volume;
-  }
-
-  /**
-   * Set the current volume of the media.
-   * @param {number} volume, Specifies the current volume of the audio/video. Must be a number between 0.0 and 1.0. 
-   */
-  setVolume (volume) {
-    this.setState({volume: volume});
-
-    this.refs['ReactVideo'].volume = this.getVolume();
   }
 
   /**
@@ -144,6 +124,27 @@ class ReactVideo extends React.Component {
    */
   getUrl () {
     return this.refs['ReactVideo'].url;
+  }
+
+  /**
+   * Set the current time of the media.
+   * @param {Number} time The time, in seconds.
+   * @return {Number} return time in seconds.
+   */
+  setCurrentTime (time) {
+    this.refs['ReactVideo'].currentTime = time;
+
+    return time;
+  }
+
+  /**
+   * Set the current volume of the media.
+   * @param {number} volume, Specifies the current volume of the audio/video. Must be a number between 0.0 and 1.0. 
+   */
+  setVolume (volume) {
+    this.setState({volume: volume});
+
+    this.refs['ReactVideo'].volume = this.getVolume();
   }
 
   /**

@@ -193,51 +193,101 @@ style: {
 
 #### canPlayType(format)
 
+>**NOTE:** The canPlayType() method checks if the browser can play the specified audio/video type.
+
+* @param {string} format, common values (video/mp4, video/webm, audio/mpeg, audio/ogg, audio/mp4).
+* @return {string} format, common values, including codecs.
 
 #### isPlaying()
 
+>**NOTE:** return if the media is currently playing.
+
+* @return {Boolean} playing, return the playback playing status.
 
 #### isEnded()
 
+>**NOTE:** get whenever the media playback has ended.
+
+* @return {Boolean} ended, return the playback ended status.
 
 #### load()
 
+>**NOTE:** Will begin loading the media immediately.
 
 #### play()
 
+>**NOTE:** Starts or resumes media playback.
 
 #### pause()
 
+>**NOTE:** Pauses media playback.
 
 #### stop()
 
+>**NOTE:** Stops media playback and returns to the beginning.
 
 #### getDuration()
 
+>**NOTE:** The duration property returns the length of the current audio/video, in seconds.
+
+* @return {number} duration, A Number representing the length of the video, in seconds. If no video is set, "NaN" (Not-a-Number) is returned.
 
 #### getCurrentTime()
 
+>**NOTE:** Returns the current time of the media, in seconds.
 
-#### setCurrentTime()
-
-
-#### getVolume()
-
-
-#### setVolume()
-
+* @return {Number} return a value between 0 to 1.
 
 #### getBuffered()
 
+>**NOTE:** The TimeRanges object represents the user's buffered ranges of the video.
+
+* @return {object} TimeRanges Object.
+  * length - get the number of buffered ranges in the audio/video
+  * start(index) - get the start position of a buffered range
+  * end(index) - get the end position of a buffered range
 
 #### getUrl()
 
+>**NOTE:** Returns the value of url.
+
+* @return {string} return the src value of the video.
+
+#### getVolume()
+
+>**NOTE:** Retun the current volume of the video.
+
+* @return {number} Must be a number between 0.0 and 1.0.
+
+#### setCurrentTime()
+
+>**NOTE:** Set the current time of the media.
+
+* @param {Number} time The time, in seconds.
+* @return {Number} return time in seconds.
 
 #### setPlaybackRate()
 
+>**NOTE:** Set video to play in slow motion.
+
+* The playbackRate property sets the current playback speed of the video.
+* @param {number} rate, Indicates the current playback speed of the video.
+* @example
+  * 1.0 is normal speed
+  * 0.5 is half speed (slower)
+  * 2.0 is double speed (faster)
+  * -1.0 is backwards, normal speed
+  * -0.5 is backwards, half speed
+
+#### setVolume()
+
+>**NOTE:** Set the current volume of the media.
+
+* @param {number} volume, Specifies the current volume of the audio/video. Must be a number between 0.0 and 1.0. 
 
 #### toggle()
 
+>**NOTE:** Toggles the media playback state.
 
 ## Stats
 
