@@ -1,12 +1,13 @@
 {
   "name": "react.video",
-  "version": "1.0.9",
+  "version": "1.0.7",
   "description": "A reusable React.js video component.",
   "main": "index.js",
   "scripts": {
     "test": "gulp",
     "compile": "babel --presets es2015,stage-0,react -d ./ src/",
-    "prepublish": "npm run compile"
+    "prepublish": "npm run compile",
+    "patch-release": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
