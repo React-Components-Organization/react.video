@@ -7,7 +7,7 @@
     "test": "gulp",
     "compile": "babel --presets es2015,stage-0,react -d ./ src/",
     "prepublish": "npm run compile",
-    "patch-release": "npm version patch && npm publish && git push --follow-tags"
+    "patch-release": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
