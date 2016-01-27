@@ -12,6 +12,8 @@ script:
   - npm test
 
 after_success:
+  - git config --global user.email "oliviercolonna@gmail.com"
+  - git config --global user.name "Olivier Colonna"
   - npm run patch-release
 
 deploy:
