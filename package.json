@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "gulp",
-    "compile": "babel --presets es2015,stage-0,react -d ./ src/",
+    "compile": "babel --presets es2015, stage-0, react -d ./ src/",
     "prepublish": "npm run compile",
     "patch-release": "npm version patch && npm publish"
   },
@@ -28,7 +28,7 @@
     "url": "https://github.com/React-Components-Organization/react.video/issues"
   },
   "homepage": "https://github.com/React-Components-Organization/react.video#readme",
-  "peerDependencies": {
+  "dependencies": {
     "react": "^0.14.6"
   },
   "devDependencies": {
