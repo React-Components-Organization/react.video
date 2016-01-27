@@ -1,3 +1,6 @@
+/* jshint strict: true */
+/* jshint esversion: 6 */
+
 /**
  * @author oliviercolonna@gmail.com
  * Copyright(c) 2016 Olivier Colonna
@@ -15,7 +18,7 @@ class ReactVideo extends React.Component {
     this.state = {
       volume: 1,
       playbackRate: 1
-    }
+    };
   }
 
   /**
@@ -24,7 +27,7 @@ class ReactVideo extends React.Component {
    * @return {string} format, common values, including codecs.
    */
   canPlayType (format) {
-    return this.refs['ReactVideo'].canPlayType(format);
+    return this.refs.ReactVideo.canPlayType(format);
   }
 
   /**
@@ -32,7 +35,7 @@ class ReactVideo extends React.Component {
    * @return {Boolean} playing, return the playback playing status.
    */
   isPlaying () {
-    return !Boolean(this.refs['ReactVideo'].paused);
+    return !Boolean(this.refs.ReactVideo.paused);
   }
 
   /**
@@ -40,28 +43,28 @@ class ReactVideo extends React.Component {
    * @return {Boolean} ended, return the playback ended status.
    */
   isEnded () {
-    return Boolean(this.refs['ReactVideo'].ended);
+    return Boolean(this.refs.ReactVideo.ended);
   }
 
   /**
    * Will begin loading the media immediately.
    */
   load () {
-    this.refs['ReactVideo'].load();
+    this.refs.ReactVideo.load();
   }
 
   /**
    * Starts or resumes media playback.
    */
   play () {
-    this.refs['ReactVideo'].play();
+    this.refs.ReactVideo.play();
   }
 
   /**
    * Pauses media playback.
    */
   pause () {
-    this.refs['ReactVideo'].pause();
+    this.refs.ReactVideo.pause();
   }
 
   /**
@@ -79,7 +82,7 @@ class ReactVideo extends React.Component {
    * @return {number} duration, A Number representing the length of the video, in seconds. If no video is set, "NaN" (Not-a-Number) is returned.
    */
   getDuration () {
-    return this.refs['ReactVideo'].duration;
+    return this.refs.ReactVideo.duration;
   }
 
   /**
@@ -87,7 +90,7 @@ class ReactVideo extends React.Component {
    * @return {Number} seconds.
    */
   getCurrentTime () {
-    return this.refs['ReactVideo'].currentTime;
+    return this.refs.ReactVideo.currentTime;
   }
 
   /**
@@ -106,7 +109,7 @@ class ReactVideo extends React.Component {
    * end(index) - get the end position of a buffered range
    */
   getBuffered () {
-    const vid = this.refs['ReactVideo'];
+    const vid = this.refs.ReactVideo;
     
     return vid.buffured;
   }
@@ -123,7 +126,7 @@ class ReactVideo extends React.Component {
    * @return {string} return the src value of the video.
    */
   getUrl () {
-    return this.refs['ReactVideo'].url;
+    return this.refs.ReactVideo.url;
   }
 
   /**
@@ -132,7 +135,7 @@ class ReactVideo extends React.Component {
    * @return {Number} return time in seconds.
    */
   setCurrentTime (time) {
-    this.refs['ReactVideo'].currentTime = time;
+    this.refs.ReactVideo.currentTime = time;
 
     return time;
   }
@@ -144,7 +147,7 @@ class ReactVideo extends React.Component {
   setVolume (volume) {
     this.setState({volume: volume});
 
-    this.refs['ReactVideo'].volume = this.getVolume();
+    this.refs.ReactVideo.volume = this.getVolume();
   }
 
   /**
