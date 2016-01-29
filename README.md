@@ -60,7 +60,7 @@ class App extends React.Component {
       </ReactVideo>
 
       <div>
-        <div onClick={this.onClickPlay}>muted</div>
+        <div onClick={this.onClickPlay}>Play</div>
       </div>
     );
   }
