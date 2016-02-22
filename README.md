@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/React-Components-Organization/react.video.svg?branch=master)](https://travis-ci.org/React-Components-Organization/react.video)
 [![npm version](https://badge.fury.io/js/react.video.svg)](https://badge.fury.io/js/react.video)
+[![npm](https://img.shields.io/npm/dt/react.video.svg)](https://www.npmjs.com/package/react.video)
 
 A react video component, built with ES2015.
 
