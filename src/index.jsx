@@ -35,7 +35,8 @@ export default class ReactVideo extends React.Component {
    * @return {Boolean} playing, return the playback playing status.
    */
   isPlaying () {
-    return !Boolean(this.refs.ReactVideo.paused);
+    const isPaused = Boolean(this.refs.ReactVideo.paused);
+    return !isPaused;
   }
 
   /**
@@ -162,9 +163,13 @@ export default class ReactVideo extends React.Component {
    * -0.5 is backwards, half speed
    */
   setPlaybackRate (rate) {
-    this.setState({playbackRate: rate});
-
-    this.state.playbackRate = this.getPlaybackRate();
+    this.setState({
+      playbackRate: rate
+    });
+ 
+    this.setState({
+      playbackRate: this.getPlaybackRate()
+    });
   }
 
   /**
@@ -179,11 +184,11 @@ export default class ReactVideo extends React.Component {
   }
 
   render () {
-    const { not_supported_message, cls, source } = this.props;
+    const { notSupportedMessage, cls, source } = this.props;
 
     return (
       <video ref={'ReactVideo'} className={`video ${cls}`} {...this.props}>
-        {not_supported_message}
+        {notSupportedMessage}
         {source.map((item, i) => {
           return (
             <source src={item.src} type={item.type} key={i} />
@@ -192,7 +197,7 @@ export default class ReactVideo extends React.Component {
       </video>
     );
   }
-};
+}
 
 ReactVideo.defaultProps = {
   cls: void 0,
@@ -206,12 +211,12 @@ ReactVideo.defaultProps = {
   preload: true,
   width: null,
   height: null,
-  not_supported_message: 'Sorry your browser does not support HTML5 video',
+  notSupportedMessage: 'Sorry your browser does not support HTML5 video',
   style: {}
 };
 
 ReactVideo.propTypes = {
-  baseCls: React.PropTypes.string,
+  cls: React.PropTypes.string,
   autoPause: React.PropTypes.bool,
   autoResume: React.PropTypes.bool,
   source: React.PropTypes.arrayOf(React.PropTypes.object),
@@ -220,5 +225,6 @@ ReactVideo.propTypes = {
   loop: React.PropTypes.bool,
   posterUrl: React.PropTypes.string,
   preload: React.PropTypes.bool,
-  style: React.PropTypes.object
+  style: React.PropTypes.object,
+  notSupportedMessage: React.PropTypes.string
 };

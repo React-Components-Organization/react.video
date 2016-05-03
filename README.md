@@ -171,7 +171,7 @@ Default to: true
 
 >**NOTE:** The height of this Component; must be a valid CSS length value, e.g: 300, 100px, 30%, etc. By default, if this is not explicitly set, this Component's element will simply have its own natural size. If set to auto, it will set the height to null meaning it will have its own natural size.
 
-#### not_supported_message {string}
+#### notSupportedMessage {string}
 
 >**NOTE:** The message to display in case the browser cannot play the media.
 Default to: 'Sorry your browser does not support HTML5 video.'
