@@ -11,7 +11,7 @@
 
 import React from 'react';
 
-class ReactVideo extends React.Component {
+export default class ReactVideo extends React.Component {
 
   constructor (props) {
     super(props);
@@ -222,5 +222,3 @@ ReactVideo.propTypes = {
   preload: React.PropTypes.bool,
   style: React.PropTypes.object
 };
-
-export default ReactVideo;
