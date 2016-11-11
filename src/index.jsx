@@ -111,7 +111,7 @@ export default class ReactVideo extends React.Component {
    */
   getBuffered () {
     const vid = this.refs.ReactVideo;
-    
+
     return vid.buffured;
   }
 
@@ -143,7 +143,7 @@ export default class ReactVideo extends React.Component {
 
   /**
    * Set the current volume of the media.
-   * @param {number} volume, Specifies the current volume of the audio/video. Must be a number between 0.0 and 1.0. 
+   * @param {number} volume, Specifies the current volume of the audio/video. Must be a number between 0.0 and 1.0.
    */
   setVolume (volume) {
     this.setState({volume: volume});
@@ -166,7 +166,7 @@ export default class ReactVideo extends React.Component {
     this.setState({
       playbackRate: rate
     });
- 
+
     this.setState({
       playbackRate: this.getPlaybackRate()
     });
@@ -184,10 +184,11 @@ export default class ReactVideo extends React.Component {
   }
 
   render () {
-    const { notSupportedMessage, cls, source } = this.props;
+    const {notSupportedMessage, cls, source, posterUrl, ...props} = this.props;
+    const className = cls ? `video ${cls}` : `video`;
 
     return (
-      <video ref={'ReactVideo'} className={`video ${cls}`} {...this.props}>
+      <video ref={'ReactVideo'} className={className} {...props}>
         {notSupportedMessage}
         {source.map((item, i) => {
           return (
